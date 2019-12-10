@@ -1,0 +1,37 @@
+#!/bin/bash
+sudo apt install git
+if [ -d popcorn-desktop ]
+then
+	sudo rm -R popcorn-desktop
+	git clone https://github.com/popcorn-official/popcorn-desktop.git
+else
+git clone https://github.com/popcorn-official/popcorn-desktop.git
+fi
+
+cd popcorn-desktop
+sudo apt install nodejs
+sudo apt install curl
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - #Настраиваем хранилище
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sed -i '145s/nwVersion/'"'"'0.35.3'"'"'/' gulpfile.js
+sed -i '145s/nwVersion/'"'"'0.35.3'"'"'/' gulpfile.js
+
+sudo apt-get update && sudo apt-get install yarn
+echo 2
+yarn init -y #Инициализация нового проекта
+echo 3
+yarn #Установка всех зависимостей
+echo 4
+sudo npm install --global gulp-cli #Установка gulp
+echo 5
+sudo npm i -g nw-builder
+sudo yarn run gulp
+yarn config set yarn-offline-mirror ./node_modules/
+echo 6
+yarn install --ignore-engines
+echo 7
+sudo yarn build
+echo 8
+sudo yarn gulp run
