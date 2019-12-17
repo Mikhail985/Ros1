@@ -1,0 +1,2 @@
+isu
+-DCATKIN_DEVEL_PREFIX=/home/xubuntu/workspace/devel -DCMAKE_INSTALL_PREFIX=/home/xubuntu/workspace/install -G Unix Makefiles

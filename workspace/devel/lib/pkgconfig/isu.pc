@@ -1,0 +1,8 @@
+prefix=/home/xubuntu/workspace/devel
+
+Name: isu
+Description: Description of isu
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/xubuntu/workspace/devel/lib 
+Requires: 

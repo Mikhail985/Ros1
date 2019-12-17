@@ -1,0 +1,8 @@
+prefix=/home/xubuntu/workspace/install
+
+Name: isu
+Description: Description of isu
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/xubuntu/workspace/install/lib 
+Requires: 
